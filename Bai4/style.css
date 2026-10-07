@@ -1,0 +1,90 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+figure img {
+    width: 100% !important; 
+}
+
+ul {
+    list-style: none;
+}
+
+.site-header {
+    padding: 1rem;
+    text-align: center;
+}
+
+.main-nav ul {
+    display: flex;
+    flex-wrap: wrap; /* Tự xuống hàng trên màn hình nhỏ */
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+.layout {
+    width: 100%;
+    max-width: 1100px; /* Giới hạn độ rộng tối đa trên màn hình lớn */
+    margin: 0 auto;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: 1fr; /* Mặc định 1 cột cho Mobile */
+    gap: 2rem;
+}
+
+
+.value-list, 
+.team-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+
+.contact-form input,
+.contact-form textarea,
+.contact-form button {
+    width: 100%;
+    padding: 0.5rem;
+}
+
+
+main > article,
+main > section {
+    margin-bottom: 2rem;
+}
+
+
+.site-footer {
+    padding: 2rem 1rem;
+}
+
+.footer-cols {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+@media (min-width: 768px) {
+    .layout {
+       
+        grid-template-columns: 1fr 280px; 
+    }
+}
